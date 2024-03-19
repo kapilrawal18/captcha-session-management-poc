@@ -1,0 +1,394 @@
+"2024-03-15 10:43:33 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15h9m25s906ms96µs900ns).
+""2024-03-15 11:15:23 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2024-03-15 11:15:23 - HikariPool-1 - Shutdown initiated...
+""2024-03-15 11:15:23 - HikariPool-1 - Shutdown completed.
+""2024-03-15 11:15:27 - Starting CaptchaProjectApplication using Java 17.0.10 on MUM-KapilR with PID 11120 (C:\Users\Kapil.R\Desktop\New Captcha  POC\user-backend\target\classes started by Kapil.r in C:\Users\Kapil.R\Desktop\New Captcha  POC\user-backend)
+""2024-03-15 11:15:27 - No active profile set, falling back to 1 default profile: "default"
+""2024-03-15 11:15:27 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+""2024-03-15 11:15:27 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+""2024-03-15 11:15:28 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2024-03-15 11:15:28 - Finished Spring Data repository scanning in 57 ms. Found 1 JPA repository interfaces.
+""2024-03-15 11:15:29 - Tomcat initialized with port(s): 8080 (http)
+""2024-03-15 11:15:30 - Starting service [Tomcat]
+""2024-03-15 11:15:30 - Starting Servlet engine: [Apache Tomcat/9.0.78]
+""2024-03-15 11:15:30 - Initializing Spring embedded WebApplicationContext
+""2024-03-15 11:15:30 - Root WebApplicationContext: initialization completed in 2118 ms
+""2024-03-15 11:15:30 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2024-03-15 11:15:30 - HHH000412: Hibernate ORM core version 5.6.15.Final
+""2024-03-15 11:15:31 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2024-03-15 11:15:31 - HikariPool-1 - Starting...
+""2024-03-15 11:15:31 - HikariPool-1 - Start completed.
+""2024-03-15 11:15:31 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2024-03-15 11:15:32 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2024-03-15 11:15:32 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2024-03-15 11:15:33 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1eea443b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@741a0d0a, org.springframework.security.web.context.SecurityContextPersistenceFilter@27a5abc, org.springframework.security.web.header.HeaderWriterFilter@13902dc8, org.springframework.web.filter.CorsFilter@5385622d, org.springframework.security.web.authentication.logout.LogoutFilter@380e521e, com.captcha.project.filter.JwtAuthFilter@7f599bc1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@72ee45be, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2877e32f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@308711d6, org.springframework.security.web.session.SessionManagementFilter@7c900776, org.springframework.security.web.access.ExceptionTranslationFilter@30b23c21, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@51f763dd]
+""2024-03-15 11:15:33 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2024-03-15 11:15:34 - LiveReload server is running on port 35729
+""2024-03-15 11:15:34 - Tomcat started on port(s): 8080 (http) with context path ''
+""2024-03-15 11:15:34 - Started CaptchaProjectApplication in 7.034 seconds (JVM running for 7.657)
+""2024-03-15 11:19:39 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2024-03-15 11:19:39 - Initializing Servlet 'dispatcherServlet'
+""2024-03-15 11:19:39 - Completed initialization in 1 ms
+""2024-03-15 11:19:39 - ***********AuthController Register*********
+""2024-03-15 11:19:39 - AuthService saveUser
+""2024-03-15 11:20:29 - ***********AuthController login*********
+""2024-03-15 11:20:29 - AuthService authenticate
+""2024-03-15 11:20:30 - User logged in successfully
+""2024-03-15 11:20:54 - ***********UserController updateProfile*********
+""2024-03-15 11:22:05 - ***********AuthController login*********
+""2024-03-15 11:22:05 - AuthService authenticate
+""2024-03-15 11:22:05 - User logged in successfully
+""2024-03-15 11:23:20 - ***********UserController updateProfile*********
+""2024-03-15 11:24:04 - ***********UserController saveContactDetails*********
+""2024-03-15 11:24:04 - ***********UserController findUserById*********
+""2024-03-15 11:29:33 - ***********AuthController login*********
+""2024-03-15 11:29:33 - AuthService authenticate
+""2024-03-15 11:29:33 - User logged in successfully
+""2024-03-15 11:29:33 - ***********UserController getAllUsers*********
+""2024-03-15 11:29:42 - ***********UserController getAllUsers*********
+""2024-03-15 11:30:00 - ***********UserController updateUserData*********
+""2024-03-15 11:30:00 - Resolved [java.lang.NullPointerException: Cannot invoke "String.isEmpty()" because the return value of "com.captcha.project.dto.UpdateUserRequestDTO.getCountryCode()" is null]
+""2024-03-15 11:30:07 - ***********UserController updateUserData*********
+""2024-03-15 11:30:07 - Resolved [java.lang.NullPointerException: Cannot invoke "String.isEmpty()" because the return value of "com.captcha.project.dto.UpdateUserRequestDTO.getCountryCode()" is null]
+""2024-03-15 11:46:57 - ***********AuthController login*********
+""2024-03-15 11:46:57 - AuthService authenticate
+""2024-03-15 11:46:57 - User logged in successfully
+""2024-03-15 11:46:57 - ***********UserController findUserById*********
+""2024-03-15 11:53:03 - ***********AuthController login*********
+""2024-03-15 11:53:03 - AuthService authenticate
+""2024-03-15 11:53:03 - User logged in successfully
+""2024-03-15 11:53:04 - ***********UserController findUserById*********
+""2024-03-15 11:54:12 - ***********UserController findUserById*********
+""2024-03-15 11:54:21 - ***********UserController findUserById*********
+""2024-03-15 11:54:40 - ***********AuthController login*********
+""2024-03-15 11:54:40 - AuthService authenticate
+""2024-03-15 11:54:40 - User logged in successfully
+""2024-03-15 11:54:40 - ***********UserController findUserById*********
+""2024-03-15 11:55:45 - ***********UserController findUserById*********
+""2024-03-15 11:57:35 - ***********AuthController Register*********
+""2024-03-15 11:57:35 - AuthService saveUser
+""2024-03-15 11:57:53 - ***********AuthController login*********
+""2024-03-15 11:57:53 - AuthService authenticate
+""2024-03-15 11:57:53 - User logged in successfully
+""2024-03-15 11:58:17 - ***********UserController updateProfile*********
+""2024-03-15 11:59:34 - ***********AuthController login*********
+""2024-03-15 11:59:34 - AuthService authenticate
+""2024-03-15 11:59:34 - User logged in successfully
+""2024-03-15 12:04:30 - ***********AuthController login*********
+""2024-03-15 12:04:30 - AuthService authenticate
+""2024-03-15 12:04:30 - User logged in successfully
+""2024-03-15 12:04:44 - ***********UserController updateProfile*********
+""2024-03-15 12:06:23 - ***********AuthController login*********
+""2024-03-15 12:06:23 - AuthService authenticate
+""2024-03-15 12:06:23 - User logged in successfully
+""2024-03-15 12:06:35 - ***********UserController updateProfile*********
+""2024-03-15 12:06:55 - ***********UserController saveContactDetails*********
+""2024-03-15 12:06:55 - ***********UserController findUserById*********
+""2024-03-15 12:08:03 - ***********UserController findUserById*********
+""2024-03-15 12:50:07 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2024-03-15 12:50:07 - HikariPool-1 - Shutdown initiated...
+""2024-03-15 12:50:07 - HikariPool-1 - Shutdown completed.
+""2024-03-15 12:50:29 - Starting CaptchaProjectApplication using Java 17.0.10 on MUM-KapilR with PID 24720 (C:\Users\Kapil.R\Desktop\New Captcha  POC\user-backend\target\classes started by Kapil.r in C:\Users\Kapil.R\Desktop\New Captcha  POC\user-backend)
+""2024-03-15 12:50:29 - No active profile set, falling back to 1 default profile: "default"
+""2024-03-15 12:50:29 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+""2024-03-15 12:50:29 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+""2024-03-15 12:50:31 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2024-03-15 12:50:31 - Finished Spring Data repository scanning in 89 ms. Found 1 JPA repository interfaces.
+""2024-03-15 12:50:33 - Tomcat initialized with port(s): 8080 (http)
+""2024-03-15 12:50:33 - Starting service [Tomcat]
+""2024-03-15 12:50:33 - Starting Servlet engine: [Apache Tomcat/9.0.78]
+""2024-03-15 12:50:33 - Initializing Spring embedded WebApplicationContext
+""2024-03-15 12:50:33 - Root WebApplicationContext: initialization completed in 4242 ms
+""2024-03-15 12:50:33 - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userService' defined in file [C:\Users\Kapil.R\Desktop\New Captcha  POC\user-backend\target\classes\com\captcha\project\service\UserService.class]: Instantiation of bean failed; nested exception is java.lang.NoClassDefFoundError: org/apache/log4j/Logger
+""2024-03-15 12:50:33 - Stopping service [Tomcat]
+""2024-03-15 12:50:34 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+""2024-03-15 12:50:34 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+""2024-03-15 12:50:34 - Application run failed
+"org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.captcha.project.CaptchaProjectApplication.main(CaptchaProjectApplication.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:481)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userService' defined in file [C:\Users\Kapil.R\Desktop\New Captcha  POC\user-backend\target\classes\com\captcha\project\service\UserService.class]: Instantiation of bean failed; nested exception is java.lang.NoClassDefFoundError: org/apache/log4j/Logger
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:662)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:642)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:410)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:176)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:171)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:156)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:262)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:236)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4936)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1328)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1318)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:795)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1328)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1318)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:249)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:428)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:922)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	... 18 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userService' defined in file [C:\Users\Kapil.R\Desktop\New Captcha  POC\user-backend\target\classes\com\captcha\project\service\UserService.class]: Instantiation of bean failed; nested exception is java.lang.NoClassDefFoundError: org/apache/log4j/Logger
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	... 69 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/apache/log4j/Logger
+	at com.captcha.project.service.UserService.<clinit>(UserService.java:33)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326)
+	... 80 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.apache.log4j.Logger
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:467)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 89 common frames omitted
+"2024-03-15 12:50:47 - Starting CaptchaProjectApplication using Java 17.0.10 on MUM-KapilR with PID 26104 (C:\Users\Kapil.R\Desktop\New Captcha  POC\user-backend\target\classes started by Kapil.r in C:\Users\Kapil.R\Desktop\New Captcha  POC\user-backend)
+""2024-03-15 12:50:47 - No active profile set, falling back to 1 default profile: "default"
+""2024-03-15 12:50:47 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+""2024-03-15 12:50:47 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+""2024-03-15 12:50:48 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2024-03-15 12:50:49 - Finished Spring Data repository scanning in 106 ms. Found 1 JPA repository interfaces.
+""2024-03-15 12:50:50 - Tomcat initialized with port(s): 8080 (http)
+""2024-03-15 12:50:50 - Starting service [Tomcat]
+""2024-03-15 12:50:50 - Starting Servlet engine: [Apache Tomcat/9.0.78]
+""2024-03-15 12:50:50 - Initializing Spring embedded WebApplicationContext
+""2024-03-15 12:50:50 - Root WebApplicationContext: initialization completed in 3468 ms
+""2024-03-15 12:50:51 - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userService' defined in file [C:\Users\Kapil.R\Desktop\New Captcha  POC\user-backend\target\classes\com\captcha\project\service\UserService.class]: Instantiation of bean failed; nested exception is java.lang.NoClassDefFoundError: org/apache/log4j/Logger
+""2024-03-15 12:50:51 - Stopping service [Tomcat]
+""2024-03-15 12:50:51 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+""2024-03-15 12:50:51 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+""2024-03-15 12:50:51 - Application run failed
+"org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.captcha.project.CaptchaProjectApplication.main(CaptchaProjectApplication.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:481)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userService' defined in file [C:\Users\Kapil.R\Desktop\New Captcha  POC\user-backend\target\classes\com\captcha\project\service\UserService.class]: Instantiation of bean failed; nested exception is java.lang.NoClassDefFoundError: org/apache/log4j/Logger
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:662)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:642)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:410)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:176)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:171)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:156)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:262)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:236)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4936)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1328)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1318)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:795)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1328)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1318)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:249)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:428)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:922)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	... 18 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userService' defined in file [C:\Users\Kapil.R\Desktop\New Captcha  POC\user-backend\target\classes\com\captcha\project\service\UserService.class]: Instantiation of bean failed; nested exception is java.lang.NoClassDefFoundError: org/apache/log4j/Logger
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	... 69 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/apache/log4j/Logger
+	at com.captcha.project.service.UserService.<clinit>(UserService.java:33)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326)
+	... 80 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.apache.log4j.Logger
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:467)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 89 common frames omitted
+"2024-03-15 13:37:13 - Starting CaptchaProjectApplication using Java 17.0.10 on MUM-KapilR with PID 22212 (C:\Users\Kapil.R\Desktop\New Captcha  POC\user-backend\target\classes started by Kapil.r in C:\Users\Kapil.R\Desktop\New Captcha  POC\user-backend)
+""2024-03-15 13:37:13 - No active profile set, falling back to 1 default profile: "default"
+""2024-03-15 13:37:13 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+""2024-03-15 13:37:13 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+""2024-03-15 13:37:14 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2024-03-15 13:37:15 - Finished Spring Data repository scanning in 82 ms. Found 1 JPA repository interfaces.
+""2024-03-15 13:37:16 - Tomcat initialized with port(s): 8080 (http)
+""2024-03-15 13:37:16 - Starting service [Tomcat]
+""2024-03-15 13:37:16 - Starting Servlet engine: [Apache Tomcat/9.0.78]
+""2024-03-15 13:37:16 - Initializing Spring embedded WebApplicationContext
+""2024-03-15 13:37:16 - Root WebApplicationContext: initialization completed in 3544 ms
+""2024-03-15 13:37:18 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2024-03-15 13:37:18 - HHH000412: Hibernate ORM core version 5.6.15.Final
+""2024-03-15 13:37:18 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2024-03-15 13:37:18 - HikariPool-1 - Starting...
+""2024-03-15 13:37:19 - HikariPool-1 - Start completed.
+""2024-03-15 13:37:19 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2024-03-15 13:37:20 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2024-03-15 13:37:20 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2024-03-15 13:37:22 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@c4ce2a3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@d330d47, org.springframework.security.web.context.SecurityContextPersistenceFilter@667cf10a, org.springframework.security.web.header.HeaderWriterFilter@52c6f591, org.springframework.web.filter.CorsFilter@1e23bcc5, org.springframework.security.web.authentication.logout.LogoutFilter@782c5d41, com.captcha.project.filter.JwtAuthFilter@55ed9d4a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6769a713, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ec3de37, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e94f005, org.springframework.security.web.session.SessionManagementFilter@47525583, org.springframework.security.web.access.ExceptionTranslationFilter@47f23200, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@33806d35]
+""2024-03-15 13:37:23 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2024-03-15 13:37:24 - LiveReload server is running on port 35729
+""2024-03-15 13:37:24 - Tomcat started on port(s): 8080 (http) with context path ''
+""2024-03-15 13:37:24 - Started CaptchaProjectApplication in 12.518 seconds (JVM running for 13.557)
+""2024-03-15 13:38:30 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2024-03-15 13:38:30 - Initializing Servlet 'dispatcherServlet'
+""2024-03-15 13:38:30 - Completed initialization in 1 ms
+""2024-03-15 13:38:30 - ***********AuthController Register*********
+""2024-03-15 13:38:30 - AuthService saveUser
+""2024-03-15 13:39:05 - ***********AuthController login*********
+""2024-03-15 13:39:05 - AuthService authenticate
+""2024-03-15 13:39:06 - User logged in successfully
+""2024-03-15 13:39:27 - ***********UserController updateProfile*********
+""2024-03-15 13:39:46 - ***********AuthController login*********
+""2024-03-15 13:39:46 - AuthService authenticate
+""2024-03-15 13:39:47 - User logged in successfully
+""2024-03-15 13:40:20 - ***********UserController saveContactDetails*********
+""2024-03-15 13:40:20 - ***********UserController findUserById*********
+""2024-03-15 13:43:00 - ***********AuthController login*********
+""2024-03-15 13:43:00 - AuthService authenticate
+""2024-03-15 13:43:00 - User logged in successfully
+""2024-03-15 13:43:00 - ***********UserController findUserById*********
+""2024-03-15 13:51:46 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2024-03-15 13:51:46 - HikariPool-1 - Shutdown initiated...
+""2024-03-15 13:51:46 - HikariPool-1 - Shutdown completed.
+"
