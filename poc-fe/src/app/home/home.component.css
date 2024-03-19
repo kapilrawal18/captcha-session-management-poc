@@ -2,6 +2,10 @@
   width: 200px;
   display: inline-block;
 }
+.table-container{
+  max-height: 400px;
+  overflow-y: auto; 
+}
 
 .demo-table {
     width: 100%;

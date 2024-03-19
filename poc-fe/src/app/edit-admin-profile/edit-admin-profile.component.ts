@@ -22,6 +22,9 @@ export class EditAdminProfileComponent implements OnInit {
   panelOpenStateForPersonal:boolean = false;
   panelOpenStateForContact:boolean = false;
   public setCityValue:boolean = false;
+  showDetailsForm: boolean;
+  contactDetailsList: { id: any; adminProfileForm: any; contactDetails: any; };
+  contactDetailsFlag: boolean;
   
   constructor(
     private closeAdminDialog: MatDialogRef<EditAdminProfileComponent>,
@@ -79,6 +82,10 @@ export class EditAdminProfileComponent implements OnInit {
         adminProfileForm: this.adminProfileForm.value,
         contactDetails: this.adminProfileContactForm.value
       }
+      sessionStorage.setItem('ContactDetails', JSON.stringify(valueId));
+      this.contactDetailsList = valueId;
+      this.showDetailsForm = false;
+      this.contactDetailsFlag = true;
       this.toast.success("", "User data updated successfully");
       this.dialogRef.close(valueId);
     }, (err) => {
