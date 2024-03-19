@@ -1,0 +1,105 @@
+ .container {
+    width: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+ }
+ .text-style {
+    width: 350px;
+    font-family: 'Protest Revolution', sans-serif;
+    font-size: 48px;
+    letter-spacing: 20px;
+    display: inline-flex;
+    margin-left: 35px;
+    margin-top: -15px;
+    /* color:#852be6 */
+    color: rgba(0,0,0,.42)
+ }
+ /* .box {
+    width: 300px; 
+    height: 60px; 
+    border: solid 5px rgba(0,0,0,.42);
+    border-color: rgba(0,0,0,.42) transparent transparent transparent;
+    border-radius: 56%/82px 77px 0 0;
+    margin-left: -25px;
+    display: flex;
+  } */
+  .icons-size {
+    width: 30px;
+    height: 30px;
+    margin-top: 0px;
+    color: rgba(0,0,0,.42);
+    padding-left: 40px;
+    margin-bottom: 20px;
+    
+  }
+  .example-full-width {
+    margin-bottom: 10px;
+  }
+  .error {
+    color: #f44336;
+    margin-top: -15px;
+  }
+  .spacing-btn {
+margin-right: 20px;
+  }
+  .invalid_msg {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    vertical-align: middle;
+  }
+  .text-danger {
+    color: #f44336;
+  }
+  .text-success {
+    color: #07c032;
+  }
+  .captcha-img {
+    width: 70%;
+    height: 70px;
+  }
+  .label-captcha {
+    color: rgba(0,0,0,.60);;
+  }
+  /* #line {
+    background: black;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    z-index: 99999999999999999;
+  } */
+  .captcha-container {
+    z-index: 0;
+    top: -400px;
+    left: -400px;
+    position: absolute;
+  }
+  
+  #line {
+    position: absolute;
+    width: 400px;
+    height: 100%;
+    top: 20%;
+    left: 0%;
+    border-radius: 70%;
+    border: 2px solid rgba(0,0,0,.50);
+    border-bottom: none;
+  }
+  .captcha {
+    overflow: hidden;
+    font-size: 20px;
+    position: relative;
+    letter-spacing: 20px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    background-size: cover;
+    /* border: 1px solid #ccc; */
+    color:  rgba(0,0,0,.50);
+    font-family: "Protest Revolution", sans-serif;
+    /* background-image: url("../../assets/images/captchaBg.jpg"); */
+  }

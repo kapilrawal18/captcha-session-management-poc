@@ -1,0 +1,125 @@
+.example-container {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    height: calc(100vh - 60px);
+  }
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .example-sidenav {
+     user-select: none;
+  }
+  .full-width {
+    width: 100%;
+  }
+  .menu-button {
+    transition: 300ms ease-in-out;
+    transform: rotate(0deg);
+  }
+  .menu-button.rotated {
+    transform: rotate(180deg);
+  }
+  .submenu {
+    overflow-y: hidden;
+    transition: transform 300ms ease;
+    transform: scaleY(0);
+    transform-origin: top;
+    padding-left: 30px;
+  }
+  .submenu.expanded {
+    transform: scaleY(1);
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .column {
+    flex: 1;
+    padding: 30px;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  }
+  
+  .footer {
+    width: 100%;
+    text-align: right;
+    margin-top: 10px;
+  }
+  
+  .header {
+    width: 100%;
+    height: 60px;
+  }
+  
+  .example-full-width {
+    margin-bottom: 10px;
+  }
+  
+  .spacing-btn {
+    margin-right: 20px;
+  }
+  
+  .key-set-weight {
+    font-size: 12px;
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0px;
+  }
+  
+  .key-set-weight-700 {
+    font-size: 14px;
+    display: block;
+    font-weight: 800;
+  }
+  
+  .error {
+    color: #f44336;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .dial-code{
+   width: 60px;
+   border: 1px solid #f44336;
+   display:  flex;
+  }
+  mat-grid-tile {
+    background: lightblue;
+  }
+  .example-toolbar {
+    width: 100%;
+  }
+  .signout-btn {
+    width: 100%;
+    text-align: right;
+    justify-items:right;
+    align-items: right;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  .column {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    height: 50px; /* Should be removed. Only for demonstration */
+    background-color: gainsboro;
+    border: 2px solid #ffffff;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

@@ -1,0 +1,71 @@
+<mat-icon aria-hidden="false" [mat-dialog-close]="false" aria-label="close icon" fontIcon="clear" class="close-icon"
+    style="float: right;"></mat-icon>
+<span mat-dialog-title>View Profile</span>
+<div>
+    <div class="container">
+        <div class="column left">
+            <div>
+                <p class="key-set-weight">FullName</p>
+                <p class="key-set-weight-700">{{data.fullName}}</p>
+            </div>
+            <div>
+                <p class="key-set-weight">User ID</p>
+                <p class="key-set-weight-700">{{data.userName}}</p>
+            </div>
+            <div>
+                <p class="key-set-weight">DOB</p>
+                <p class="key-set-weight-700">{{data.dob}}</p>
+            </div>
+            <div>
+                <p class="key-set-weight">Created On</p>
+                <p class="key-set-weight-700">{{data.createdOn | date : 'medium'}}</p>
+            </div>
+            <div>
+                <p class="key-set-weight">Address Line 1</p>
+                <p class="key-set-weight-700">{{data.address?.addressLine1}}</p>
+            </div>
+            <div>
+                <p class="key-set-weight">Country</p>
+                <p class="key-set-weight-700">{{data.address?.country}}</p>
+            </div>
+            <div>
+                <p class="key-set-weight">State</p>
+                <p class="key-set-weight-700">{{data.address?.state}}</p>
+            </div>
+            <div>
+                <p class="key-set-weight">Pin Code</p>
+                <p class="key-set-weight-700">{{data.address?.pinCode}}</p>
+            </div>
+        </div>
+        <div class="column right">
+            <div>
+                <p class="key-set-weight">Email</p>
+                <p class="key-set-weight-700">{{data.email}}</p>
+            </div>
+            <div>
+                <p class="key-set-weight">Gender</p>
+                <p class="key-set-weight-700">{{data.gender}}</p>
+            </div>
+            <div>
+                <p class="key-set-weight">Nationality</p>
+                <p class="key-set-weight-700">{{data.nationality}}</p>
+            </div>
+            <div>
+                <p class="key-set-weight">Updated On</p>
+                <p class="key-set-weight-700">{{data.updatedOn| date: 'medium'}}</p>
+            </div>
+            <div>
+                <p class="key-set-weight">Address Line 2</p>
+                <p class="key-set-weight-700">{{data.address?.addressLine2}}</p>
+            </div>
+            <div>
+                <p class="key-set-weight">Phone Number</p>
+                <p class="key-set-weight-700">{{data.phoneNumber}}</p>
+            </div>
+            <div>
+                <p class="key-set-weight">City</p>
+                <p class="key-set-weight-700">{{data.address?.city}}</p>
+            </div>
+        </div>
+    </div>
+</div>

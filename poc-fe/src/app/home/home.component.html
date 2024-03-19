@@ -1,0 +1,102 @@
+<div *ngIf="showDetailsForm;else other_content">
+  <div class="header">
+    <h1 style="color: #fff;">Welcome to Fiserv</h1>
+    <h1>{{selectedUser?.username}}</h1>
+  </div>
+  <a routerLink="/login" mat-raised-button style="float: right ; margin-bottom: 10px" color="accent">Sign out</a>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="demo-id">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element; let i = index"> {{i + 1}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="demo-fullName">
+      <th mat-header-cell *matHeaderCellDef> Full Name</th>
+      <td mat-cell *matCellDef="let element"> {{element.fullName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="demo-username">
+      <th mat-header-cell *matHeaderCellDef> User ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+    </ng-container>
+    <ng-container matColumnDef="demo-createdAt">
+      <th mat-header-cell *matHeaderCellDef> Created On </th>
+      <td mat-cell *matCellDef="let element"> {{element.createdAt | date :"medium"}} </td>
+    </ng-container>
+    <ng-container matColumnDef="demo-email">
+      <th mat-header-cell *matHeaderCellDef> Email </th>
+      <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+    </ng-container>
+    <ng-container matColumnDef="demo-updatedOn">
+      <th mat-header-cell *matHeaderCellDef> Updated On </th>
+      <td mat-cell *matCellDef="let element"> {{element.updatedAt | date :"medium"}} </td>
+    </ng-container>
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>Actions</th>
+      <td mat-cell *matCellDef="let element">
+        <mat-icon aria-hidden="false" aria-label="View icon" fontIcon="visibility" class="mat-icons cursor-pointer"
+          (click)="openViewDialogForAdmin(element)"  matTooltip="View" [matTooltipPosition]="'left'"></mat-icon>
+        <mat-icon aria-hidden="false" aria-label="edit icon" fontIcon="edit" class="mat-icons cursor-pointer"
+          (click)="openEditDialogForAdmin(element)" matTooltip="Edit" [matTooltipPosition]="'right'"></mat-icon>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+
+</div>
+<ng-template #other_content>
+  <!-- <div>
+    <div class="header">
+      <h1> Confirmation </h1>
+      <hr/>
+    </div>
+    <div>
+      <p style="display: block;font-size: large;">Are you sure want to store the Personal Details to server?</p>
+    <div class="container">
+   
+
+      <div class="column left">
+        <div>
+        <p class="key-set-weight">FULL NAME:</p>
+        <p class="key-set-weight-700">{{profileList?.fullName}}</p>
+</div>
+<div>
+  <p class="key-set-weight">EMAIL ADDRESS:</p>
+  <p class="key-set-weight-700">{{profileList?.email}}</p>
+</div>
+<div>
+  <p class="key-set-weight">GENDER:</p>
+  <p class="key-set-weight-700">{{profileList.fullname}}</p>
+  </div>
+  </div>
+  <div class="column right">
+    <div>
+      <p class="key-set-weight">DATE OF BIRTH:</p>
+      <p class="key-set-weight-700">{{profileList?.dob | date}}</p>
+    </div>
+    <div>
+      <p class="key-set-weight">NATIONALITY:</p>
+      <p class="key-set-weight-700">{{profileList?.nationality}}</p>
+    </div>
+  
+  </div>
+  </div>
+    
+  </div>
+    <div class="footer">
+      <hr/>
+      <button type="button"  mat-raised-button color="accent" class="spacing-btn"  (click)="backToPopup()">Back</button>
+      <button color="primary" mat-raised-button  (click)="selectSubmitBtn()">Submit</button>
+  
+  </div>
+  </div> -->
+</ng-template>
+
+<ng-template #editDialog>
+  <app-edit-admin-profile></app-edit-admin-profile>
+</ng-template>

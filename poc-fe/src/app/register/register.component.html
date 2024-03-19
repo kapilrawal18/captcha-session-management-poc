@@ -1,0 +1,96 @@
+<div class="container">
+<mat-card>
+    <mat-card-header>
+        <h1>User Registration</h1>
+    </mat-card-header>
+    <mat-card-content>
+        <form class="example-form" [formGroup]="registerForm" (ngSubmit)="proceedRegisteration()">
+            <mat-form-field class="example-full-width">
+                <mat-label>Full Name</mat-label>
+                <input matInput formControlName="fullName">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>User ID</mat-label>
+                <input matInput formControlName="userName">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="passWord" type="password">
+            </mat-form-field>
+            <div *ngIf="f.passWord.invalid &&(f.passWord.dirty || f.passWord.touched)">
+                <label class="col invalid_msg" [ngClass]="f.passWord.hasError('required') || f.passWord.hasError('minlength')  ? 'text-danger' : 'text-success'">
+                    <i class="material-icons">
+                        {{ f.passWord.hasError('required') || f.passWord.hasError('minlength') ? 'cancel' : 'check_circle' }}
+                    </i> must be at least 8 characters!
+                </label>
+                <label class="col invalid_msg" [ngClass]="f.passWord.hasError('required') || f.passWord.hasError('hasNumber')  ? 'text-danger' : 'text-success'">
+                    <i class="material-icons">
+                        {{ f.passWord.hasError('required') || f.passWord.hasError('hasNumber') ? 'cancel' : 'check_circle' }}
+                    </i>
+                    must contain at least 1 number!
+                </label>
+                <label class="col invalid_msg" [ngClass]="f.passWord.hasError('required') || f.passWord.hasError('hasCapitalCase')  ? 'text-danger' : 'text-success'">
+                    <i class="material-icons">
+                        {{ f.passWord.hasError('required') || f.passWord.hasError('hasCapitalCase') ? 'cancel' : 'check_circle' }}
+                    </i>
+                    must contain at least 1 in Capital Case!
+                </label>
+                <label class="col invalid_msg" [ngClass]="f.passWord.hasError('required') || f.passWord.hasError('hasSmallCase')  ? 'text-danger' : 'text-success'">
+                    <i class="material-icons">
+                        {{ f.passWord.hasError('required') || f.passWord.hasError('hasSmallCase') ? 'cancel' : 'check_circle' }}
+                    </i>
+                    must contain at least 1 Letter in Small Case!
+                </label>
+                <label class="col invalid_msg" [ngClass]="f.passWord.hasError('required') || f.passWord.hasError('hasSpeacialCharacters') ? 'text-danger' : 'text-success'">
+                    <i class="material-icons">
+                        {{ f.passWord.hasError('required') || f.passWord.hasError('hasSpeacialCharacters') ? 'cancel' : 'check_circle' }}
+                    </i>must contain at least 1 Special Character!
+                </label>
+                
+              </div>
+              <!-- <mat-form-field>
+                <mat-label>Roles</mat-label>
+                <select matNativeControl required>
+                  <option value="Admin">Admin</option>
+                  <option value="Customer">Customer</option>
+                  <option value="Non-Admin">Non-Admin</option>
+                </select>
+              </mat-form-field> -->
+            <div>
+                <p class="label-captcha">Captcha code</p>
+                <div class="box">
+                    <img [src]="captchaUrl" class="captcha-img">
+                    <img alt="icon" class="icons-size"
+                    src="assets/icons/refresh_24.svg#refresh_24" (click)="refreshCode()">
+                </div>
+                <!-- <div class="box">
+                    <h1 class="codeText text-style" appBlockCopyPaste style="text-align: center; padding: 10px;">{{getCaptchCode}}
+                    </h1>
+                    <img alt="icon" class="icons-size"
+                    src="assets/icons/refresh_24.svg#refresh_24" (click)="refreshCode()">
+                </div> -->
+                <mat-form-field class="example-full-width">
+                    <mat-label>Captcha</mat-label>
+                    <input matInput formControlName="captcha" (input)="getCaptchCodeValue($event)">
+                </mat-form-field>
+                <div *ngIf="validationForCaptcha" class="error">
+                    <p>Please Enter correct captcha</p>
+                </div>
+            </div>
+            <div>
+                <button mat-raised-button color="primary" class="spacing-btn" [disabled]="!registerForm.valid">Register</button>
+                <a routerLink="/login" mat-raised-button color="accent">Back to Login</a>
+           </div>            
+        </form>
+    </mat-card-content>
+</mat-card>
+
+</div>
+<div class="captcha-container">
+    <div class="captcha" #captchaImage>
+    </div>
+</div>

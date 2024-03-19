@@ -1,0 +1,27 @@
+<div fxLayout="column" class="overflow-hidden  h100p">
+    <div fxLayout="row" ngClass.gt-xs="pl32 pt28 pr32 pbt15" ngClass.xs="pt20 pl20 pr20 pbt15">
+        <div fxLayout="column" fxFlex mat-dialog-title ngClass.xs="f18 lh23px" ngClass.gt-xs="f31"
+            class="font-overpass-semibold color-black-font-color">Are you still there?</div>
+    </div>
+    <div mat-dialog-content class="overflow-scroll-y" ngClass.xs="xs-list-height" ngClass.sm="sm-list-height"
+     ngClass.gt-sm="list-height-desktop">
+        <div fxLayout="column"  ngClass.gt-xs="pl28 pr28" ngClass.xs="pl20 pr20 pbt20"
+            class="font-overpass-semibold color-black-font-color break-all-word">
+            <div class="f16 color-grey2-font-color pbt15">
+                Your session will expire soon! For your security, you will be logged out in …
+            </div>
+            <div class="f32 align-center timer-center">
+                <!-- <mat-icon class="f32">alarm</mat-icon> -->
+                <span class="timer">{{minutes}}:{{seconds}}</span>
+            </div>
+            <div class="f16 color-grey2-font-color pt15 pbt10">Do you want to stay logged in?</div>
+        </div>
+    </div>
+    <div #footer mat-dialog-actions class="border-container-style h80px footer" fxLayoutAlign="end end"
+     ngClass.gt-xs="pl24 pr32 pbt15 pt15"
+    ngClass.xs="pl20 pr20 pbt15 pt15">
+    <button mat-raised-button color="primary" class="spacing-btn" (click)="stayinLoginPage()">Stay Login</button>
+    <button (click)="closePopup()" mat-raised-button color="accent">Log out</button >
+    </div>
+
+</div>

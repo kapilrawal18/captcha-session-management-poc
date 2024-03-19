@@ -1,0 +1,324 @@
+<div *ngIf="showDetailsForm &&!contactDetailsFlag;else other_content">
+  <div class="header">
+    <h1> Profile Details</h1>
+    <hr />
+  </div>
+  <mat-tab-group [(selectedIndex)]="selectedTabIndex">
+
+    <mat-tab [disabled]="tabIndexDisabled" label="Personal Details">
+      <form class="example-form" [formGroup]="profileForm" (ngSubmit)="proceedUpdate()">
+        <div class="container">
+          <div class="column left">
+            <fieldset [disabled]="isDisabled">
+              <mat-form-field class="example-full-width">
+                <mat-label>Full Name</mat-label>
+                <input matInput formControlName="fullName">
+              </mat-form-field>
+            </fieldset>
+            <fieldset [disabled]="isDisabled">
+              <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email">
+              </mat-form-field>
+            </fieldset>
+            <div>
+              <mat-radio-group formControlName="gender" class="example-full-width">
+                <mat-label style="display: block; margin-bottom: 10px;">Gender</mat-label>
+                <mat-radio-button value="Male">Male</mat-radio-button>
+                <mat-radio-button value="Female">Female</mat-radio-button>
+              </mat-radio-group>
+            </div>
+          </div>
+          <div class="column right">
+            <mat-form-field class="example-full-width">
+              <input matInput [matDatepicker]="picker" formControlName="DOB" placeholder="Date of Birth"
+                (dateChange)="updateCalcs($event)" />
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <div *ngIf="DoBForm"> <small class="error">User cannot be less than 18 years</small></div>
+            <mat-form-field class="example-full-width">
+              <mat-label>Nationality</mat-label>
+              <mat-select placeholder="Nationality" formControlName="nationality">
+                <mat-option *ngFor="let country of countryList" [value]="country.name">
+                  {{ country.name }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="footer">
+          <hr />
+          <button type="button" mat-raised-button color="accent" class="spacing-btn"
+            (click)="closePopup()">Cancel</button>
+          <button color="primary" mat-raised-button type="submit" [disabled]="!profileForm.valid">Save</button>
+
+        </div>
+      </form>
+    </mat-tab>
+    <mat-tab [disabled]="!tabIndexDisabled" label=" Contact Details">
+      <form form class="example-form" [formGroup]="contactDetailsForms" (ngSubmit)="proceedContactUpdate()">
+        <div class="container">
+          <div class="column left">
+            <mat-form-field class="example-full-width">
+              <mat-label>AddressLine 1</mat-label>
+              <input matInput formControlName="addressLine1">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Country</mat-label>
+              <mat-select placeholder="country" name="country" formControlName="country"
+                (selectionChange)="onChangeCategory($event.value)">
+                <mat-option *ngFor="let country of countryList" [value]="country.name">
+                  {{ country.name }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>State</mat-label>
+              <mat-select placeholder="State" name="state" formControlName="state"
+                (selectionChange)="onChangeState($event.value)">
+                <mat-option *ngFor="let state of stateList" [value]="state.name">
+                  {{ state.name }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Pin Code</mat-label>
+              <input matInput formControlName="pinCode">
+            </mat-form-field>
+          </div>
+          <div class="column right">
+            <mat-form-field class="example-full-width">
+              <mat-label>AddressLine 2</mat-label>
+              <input matInput formControlName="addressLine2">
+            </mat-form-field>
+            <div style="width:125px;display: flex;">
+              <mat-form-field class="example-full-width">
+                <mat-select placeholder="DialCode" formControlName="dialCode"   (selectionChange)="onChangedialCode($event.value)" >
+                  <mat-option *ngFor="let country of countryList" [value]="country.dial_code">
+                    {{ country.dial_code }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field style="width: 500px;">
+                <mat-label>Phone Number</mat-label>
+                <input maxlength="10" matInput (keypress)="numberOnly($event)" formControlName="phoneNumber"
+                  placeholder="Please enter phone number">
+              </mat-form-field>
+            </div>
+
+            <mat-form-field class="example-full-width">
+              <mat-label>City</mat-label>
+              <mat-select placeholder="city" formControlName="city">
+                <mat-option *ngFor="let city of cityList" [value]="city.name">
+                  {{ city.name }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="footer">
+          <hr />
+          <button type="button" mat-raised-button color="accent" class="spacing-btn"
+            (click)="closePopup()">Cancel</button>
+          <button color="primary" mat-raised-button type="submit" [disabled]="!contactDetailsForms.valid">Save</button>
+
+        </div>
+      </form>
+      <!-- <form class="example-form" [formGroup]="contactDetailsForms" (ngSubmit)="proceedContactUpdate()">
+        <div class="container">
+          <div class="column left">
+            <mat-form-field class="example-full-width">
+              <mat-label>AddressLine 1</mat-label>
+              <input matInput formControlName="addressLine1">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Country</mat-label>
+              <mat-select placeholder="country" name="country" formControlName="country"
+                (selectionChange)="onChangeCategory($event.value)">
+                <mat-option *ngFor="let country of countryList" [value]="country.name">
+                  {{ country.name }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+
+            <mat-form-field class="example-full-width">
+              <mat-label>State</mat-label>
+              <mat-select placeholder="State" name="state" formControlName="state"
+                (selectionChange)="onChangeState($event.value)">
+                <mat-option *ngFor="let state of stateList" [value]="state.name">
+                  {{ state.name }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Pin Code</mat-label>
+              <input matInput formControlName="pinCode">
+            </mat-form-field>
+          </div>
+          <div class="column right">
+            <mat-form-field class="example-full-width">
+              <mat-label>AddressLine 2</mat-label>
+              <input matInput formControlName="addressLine2">
+            </mat-form-field>
+
+           
+           
+
+          </div>
+        </div>
+       
+      </form> -->
+
+    </mat-tab>
+  </mat-tab-group>
+
+</div>
+
+<ng-template #other_content>
+  <div *ngIf="selectedTabIndex ===0">
+    <div class="header">
+      <h1> Confirmation </h1>
+      <hr />
+    </div>
+    <div>
+      <p style="display: block;font-size: large;">Are you sure want to store the Personal Details to server?</p>
+      <div class="container">
+        <div class="column left">
+          <div>
+            <p class="key-set-weight">FULL NAME:</p>
+            <p class="key-set-weight-700">{{profileList?.fullname}}</p>
+          </div>
+          <div>
+            <p class="key-set-weight">EMAIL ADDRESS:</p>
+            <p class="key-set-weight-700">{{profileList?.email}}</p>
+          </div>
+          <div>
+            <p class="key-set-weight">GENDER:</p>
+            <p class="key-set-weight-700">{{profileList.gender}}</p>
+          </div>
+        </div>
+        <div class="column right">
+          <div>
+            <p class="key-set-weight">DATE OF BIRTH:</p>
+            <p class="key-set-weight-700">{{profileList?.dob | date}}</p>
+          </div>
+          <div>
+            <p class="key-set-weight">NATIONALITY:</p>
+            <p class="key-set-weight-700">{{profileList?.nationality}}</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="footer">
+      <hr />
+      <button type="button" mat-raised-button color="accent" class="spacing-btn" (click)="backToPopup()">Back</button>
+      <button color="primary" mat-raised-button (click)="selectSubmitBtn()">Submit</button>
+
+    </div>
+  </div>
+  <div *ngIf="contactDetailsFlag && selectedTabIndex ===1">
+    <div class="header">
+      <h1> Confirmation </h1>
+      <hr />
+    </div>
+    <div>
+      <p style="display: block;font-size: large;">Are you sure want to store the contact Details to server?</p>
+      <div class="container">
+        <div class="column left">
+          <div>
+            <p class="key-set-weight">ADDRESS LINE 1:</p>
+            <p class="key-set-weight-700">{{contactDetailsList?.addressLine1}}</p>
+          </div>
+          <div>
+            <p class="key-set-weight">ADDRESS LINE 2:</p>
+            <p class="key-set-weight-700">{{contactDetailsList?.addressLine2}}</p>
+          </div>
+          <div>
+            <p class="key-set-weight">COUNTRY:</p>
+            <p class="key-set-weight-700">{{contactDetailsList.country}}</p>
+          </div>
+          <div>
+            <p class="key-set-weight">PHNONE NUMBER:</p>
+            <p class="key-set-weight-700">{{contactDetailsList.countryCode}} {{contactDetailsList?.phoneNumber}}</p>
+          </div>
+        </div>
+        <div class="column right">
+          <div>
+            <p class="key-set-weight">STATE:</p>
+            <p class="key-set-weight-700">{{contactDetailsList?.state}}</p>
+          </div>
+          <div>
+            <p class="key-set-weight">CITY:</p>
+            <p class="key-set-weight-700">{{contactDetailsList?.city}}</p>
+          </div>
+          <div>
+            <p class="key-set-weight">PINCODE:</p>
+            <p class="key-set-weight-700">{{contactDetailsList?.pinCode}}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer">
+      <hr />
+      <button type="button" mat-raised-button color="accent" class="spacing-btn"
+        (click)="backToContactPopup()">Back</button>
+      <button color="primary" mat-raised-button (click)="selectContactSubmitBtn()">Submit</button>
+
+    </div>
+  </div>
+</ng-template>
+<!-- <div *ngIf="contactDetailsFlag">
+  <div class="header">
+    <h1> Confirmation </h1>
+    <hr />
+  </div>
+  <div>
+    <p style="display: block;font-size: large;">Are you sure want to store the contact Details to server?</p>
+    <div class="container">
+      <div class="column left">
+        <div>
+          <p class="key-set-weight">ADDRESS LINE 1:</p>
+          <p class="key-set-weight-700">{{contactDetailsList?.addressLine1}}</p>
+        </div>
+        <div>
+          <p class="key-set-weight">ADDRESS LINE 2:</p>
+          <p class="key-set-weight-700">{{contactDetailsList?.addressLine2}}</p>
+        </div>
+        <div>
+          <p class="key-set-weight">COUNTRY:</p>
+          <p class="key-set-weight-700">{{contactDetailsList.country}}</p>
+        </div>
+        <div>
+          <p class="key-set-weight">PHNONE NUMBER:</p>
+          <p class="key-set-weight-700">{{contactDetailsList.dialCode}} {{contactDetailsList?.phoneNumber}}</p>
+        </div>
+      </div>
+      <div class="column right">
+        <div>
+          <p class="key-set-weight">STATE:</p>
+          <p class="key-set-weight-700">{{contactDetailsList?.state}}</p>
+        </div>
+        <div>
+          <p class="key-set-weight">CITY:</p>
+          <p class="key-set-weight-700">{{contactDetailsList?.city}}</p>
+        </div>
+        <div>
+          <p class="key-set-weight">PINCODE:</p>
+          <p class="key-set-weight-700">{{contactDetailsList?.pinCode}}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer">
+    <hr />
+    <button type="button" mat-raised-button color="accent" class="spacing-btn" (click)="backToPopup()">Back</button>
+    <button color="primary" mat-raised-button (click)="selectContactSubmitBtn()">Submit</button>
+
+  </div>
+</div> -->

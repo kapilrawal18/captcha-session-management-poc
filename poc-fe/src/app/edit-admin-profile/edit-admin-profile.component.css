@@ -1,0 +1,42 @@
+.gender {
+    display: block;
+    margin: 5px 0;
+}
+
+.select-nationality {
+    margin-top: 10px;
+}
+
+.accordionPanel form {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.accordionPanel .mat-expansion-panel {
+    margin-bottom: 10px;
+}
+
+.contactForm {
+    height: 300px;
+    overflow-x: hidden;
+    padding-right: 10px;
+}
+
+.closeButton {
+    right: 0;
+    position: absolute;
+    top: 0;
+    padding-right: 0px;
+    text-align: end;
+    background: transparent;
+}
+
+.closeButton:hover,
+.closeButton:focus {
+    cursor: pointer;
+    background: transparent;
+}
+
+.mat-expansion-panel-header-description {
+    flex-grow: 0.3;
+}

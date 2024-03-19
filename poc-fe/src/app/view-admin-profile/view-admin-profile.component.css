@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .column {
+    flex: 1;
+    padding: 30px;
+  }
+  
+  .key-set-weight {
+    font-size: 12px;
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0px;
+  }
+  
+  .key-set-weight-700 {
+    font-size: 14px;
+    display: block;
+    font-weight: 800;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  }
+  

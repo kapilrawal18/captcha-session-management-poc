@@ -1,0 +1,144 @@
+<!-- Edit Admin Dialog Box</h1> -->
+<div class="position-relative">
+    <h1 mat-dialog-title> Edit Profile </h1>
+    <mat-icon aria-hidden="false" (click)="closeBtn()" aria-label="close icon" fontIcon="clear"
+        class="close-icon closeButton">
+    </mat-icon>
+    <mat-accordion class="accordionPanel" mutli="false">
+        <mat-expansion-panel (opened)="panelOpenStateForPersonal = true" (closed)="panelOpenStateForPersonal = false">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Personal Details
+                </mat-panel-title>
+                <mat-panel-description>
+                    Click To {{panelOpenStateForPersonal ? 'close' : 'open'}}
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <form [formGroup]="adminProfileForm" (ngSubmit)="updateAdminUser()">
+                <div mat-dialog-content>
+                    <mat-form-field class="disabled-fields">
+                        <mat-label>Full Name</mat-label>
+                        <input matInput formControlName="fullName">
+                        <mat-error *ngIf="adminProfileForm.get('fullName')?.invalid">required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>User ID</mat-label>
+                        <input matInput formControlName="userName" readonly="true">
+                        <mat-error *ngIf="adminProfileForm.get('userName')?.invalid">required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Created On</mat-label>
+                        <input matInput  [matDatepicker]="picker" formControlName="createdOn" readonly="true">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker disabled="true"></mat-datepicker>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Email</mat-label>
+                        <input matInput formControlName="email">
+                        <mat-error *ngIf="adminProfileForm.get('email')?.invalid">required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="standard">
+                        <mat-label>Date Of Birth</mat-label>
+                        <input matInput [matDatepicker]="picker1" formControlName="dateOfBirth"
+                            (dateChange)="updateCalcs($event)">
+                        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                        <mat-datepicker #picker1></mat-datepicker>
+                    </mat-form-field>
+                    <div *ngIf="DoBForm"> <small class="error">User cannot be less than 18 years</small></div>
+                    <div>
+                        <mat-radio-group formControlName="gender" class="example-full-width">
+                            <mat-label class="gender">Gender</mat-label>
+                            <mat-radio-button value="Male">Male</mat-radio-button>
+                            <mat-radio-button value="Female">Female</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                    <mat-form-field class="select-nationality">
+                        <mat-label>Nationality</mat-label>
+                        <mat-select placeholder="Nationality" formControlName="nationality">
+                            <mat-option *ngFor="let country of countryList" [value]="country.name">
+                                {{ country.name }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div mat-dialog-actions align="end">
+                    <button mat-raised-button color="primary" [mat-dialog-close]="false" (click)="closeBtn()">Cancel</button>
+                    <button mat-raised-button color="accent" [disabled]="adminProfileForm.pristine || !adminProfileForm.valid"
+                        type="submit">Update</button>
+                </div>
+            </form>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenStateForContact = true" (closed)="panelOpenStateForContact = false">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Contact Details
+                </mat-panel-title>
+                <mat-panel-description>
+                    Click To {{panelOpenStateForContact ? 'close' : 'open'}}
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <form [formGroup]="adminProfileContactForm" class="contactForm" (ngSubmit)="updateAdminUser()">
+                <div mat-dialog-content>
+                    <mat-form-field class="example-full-width" style="width: 48%;padding-right: 10px;">
+                        <mat-label>AddressLine 1</mat-label>
+                        <input matInput formControlName="addressLine1">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width" style="width: 50%">
+                        <mat-label>AddressLine 2</mat-label>
+                        <input matInput formControlName="addressLine2">
+                    </mat-form-field>
+                    <div style="display: flex;">
+                        <mat-form-field class="example-full-width" style="width: 48%;padding-right: 10px;">
+                            <mat-select placeholder="dialCode" formControlName="dialCode">
+                                <mat-option *ngFor="let country of countryList" [value]="country.dial_code">
+                                    {{ country.dial_code }}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field style="width: 50%">
+                            <mat-label>Phone Number</mat-label>
+                            <input maxlength="10" matInput (keypress)="numberOnly($event)" formControlName="phoneNumber"
+                                placeholder="Please enter phone number">
+                        </mat-form-field>
+                    </div>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Country</mat-label>
+                        <mat-select placeholder="country" name="country" formControlName="country"
+                            (selectionChange)="onChangeCategory($event.value)">
+                            <mat-option *ngFor="let country of countryList" [value]="country.name">
+                                {{ country.name }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>State</mat-label>
+                        <mat-select placeholder="State" name="state" formControlName="state"
+                            (selectionChange)="onChangeState($event.value)">
+                            <mat-option *ngFor="let state of stateList" [value]="state.name">
+                                {{ state.name }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>City</mat-label>
+                        <mat-select placeholder="city" formControlName="city">
+                            <mat-option *ngFor="let city of cityList" [value]="city.name">
+                                {{ city.name }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Pin Code</mat-label>
+                        <input matInput formControlName="pinCode">
+                    </mat-form-field>
+                </div>
+                <div mat-dialog-actions align="end">
+                    <button mat-raised-button color="primary" [mat-dialog-close]="false" (click)="closeBtn()">Cancel</button>
+                    <button mat-raised-button color="accent" [disabled]="adminProfileContactForm.pristine || !adminProfileContactForm.valid"
+                        type="submit">Update</button>
+                </div>
+            </form>
+        </mat-expansion-panel>
+    </mat-accordion>
+    
+</div>
